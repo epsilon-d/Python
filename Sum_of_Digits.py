@@ -1,5 +1,5 @@
 # Practice #7: Sum of Digit
-# This program is to calculate sum of digits of integer number.
+# This program calculates the sum of the number of digits of the integer.
 
 number = int(input("Please input any integer number: "))
 number_copy = number
