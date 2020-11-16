@@ -1,0 +1,27 @@
+import requests
+from bs4 import BeautifulSoup
+
+# 파싱할 페이지를 요청
+html = requests.get('https://www.yonsei.ac.kr/wj/support/notice.jsp')
+
+# 페이지 정보중 html 코드만 얻어서 파싱
+soup = BeautifulSoup(html.text, 'html.parser')
+
+# BeautifulSoup의 find('태그이름', {'속성이름':'속성값'})
+divs1 = soup.find('ul', {'class':'board_list'})
+
+# BeautifulSoup의 findAll('태그이름') => 일치하는 모든 태그의 내용을 찾아서 리스트로 저장
+lis1 = divs1.findAll('li')
+for li in lis1:
+    notice = li.find('strong')
+    a = notice.text
+    b = str()
+    for i in range(len(a)):
+        if a[i] == "\n" or a[i] == "\t":
+            i = i + 1
+            continue
+        if a[i:i+2] == "  ":
+            i = i + 1
+            continue
+        b = b + a[i]
+    print(b)
