@@ -3,25 +3,24 @@ class Triangle:
     height = 0
 
     def set_length(self, a, b):
-        a = self.base
-        b = self.height
+        self.base = a
+        self.height = b
 
     def print_area(self):
-        area =
+        area = self.base * self.height * (1/2)
         return area
 
 
 class RATriangle(Triangle):
     def print_hypotenuse(self):
-        c = (self.a ** 2 + self.b ** 2) ** (1/2)
-        return c
+        hypotenuse = (self.base ** 2 + self.height ** 2) ** (1/2)
+        return hypotenuse
 
 
-'''
 x = Triangle()
-x.base = 5
-x.height = 4
+x.set_length(5, 4)
 print(x.print_area())
-'''
 
-Triangle.set_length(5, 4)
+y = RATriangle()
+y.set_length(3, 4)
+print(y.print_hypotenuse())
