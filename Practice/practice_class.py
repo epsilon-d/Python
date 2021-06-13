@@ -1,3 +1,5 @@
+# https://aitrack.elice.io/courses/12015/lectures/100916/materials/14
+
 # 클래스 Bbread(붕어빵)을 만들어봅시다.
 # Bbread의 필드 taste를 생성하고, "밀가루"를 대입해봅시다.
 # Bbread의 메서드 eat()를 생성해봅시다. 이 메서드는 taste, "맛이 나요!"를 출력합니다.
