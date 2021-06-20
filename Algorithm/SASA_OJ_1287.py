@@ -22,6 +22,22 @@ elif input_number == 4:
         print(time_list[0] + 3 * time_list[1] + time_list[3])
 elif input_number == 5:
     if time_list[0] + time_list[-2] < time_list[1] * 2:
-        print(sum(time_list) + time_list[0])
+        print(sum(time_list) + 2 * time_list[0])
     else:
         print(2 * time_list[0] + 3 * time_list[1] + time_list[2] + time_list[-1])
+elif input_number == 6:
+    if time_list[0] + time_list[-2] < time_list[1] * 2:
+        print(sum(time_list) + 3 * time_list[0])
+    else:
+        if time_list[0] + time_list[2] < time_list[1] * 2:
+            print(3 * time_list[0] + 3 * time_list[1] + time_list[2] + time_list[3] + time_list[-1])
+        else:
+            print(2 * time_list[0] + 5 * time_list[1] + time_list[3] + time_list[-1])
+elif input_number == 7:
+    if time_list[0] + time_list[-2] < time_list[1] * 2:
+        print(sum(time_list) + 4 * time_list[0])
+    else:
+        if time_list[0] + time_list[-4] < time_list[1] * 2:
+            print(4 * time_list[0] + 3 * time_list[1] + time_list[2] + time_list[3] + time_list[4] + time_list[-1])
+        else:
+            print(3 * time_list[0] + 5 * time_list[1] + time_list[2] + time_list[-3] + time_list[-1])
