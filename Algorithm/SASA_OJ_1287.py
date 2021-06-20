@@ -8,8 +8,6 @@ for i in range(len(time_list)):
 
 time_list.sort()    # 같은 수 있을 수 있음.
 
-destination = []
-
 result = 0
 if input_number == 2:
     print(sum(time_list))
