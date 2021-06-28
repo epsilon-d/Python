@@ -3,13 +3,19 @@ class Fib:
         self.memo = {}
 
     def fibonacci(self, num):
-        if num == 1:
+        if num <= 2:
             return 1
-        return fibonacci(num - 1) + fibonacci(num - 2)
+
+        if num in self.memo:
+            return self.memo[num]
+
+        self.memo[num] = self.fibonacci(num - 1) + self.fibonacci(num - 2)
+
+        return self.memo[num]
 
 
 def main():
-    print(fibonacci(10))  # should return 55
+    print(Fib.fibonacci(10))  # should return 55
 
 
 if __name__ == "__main__":
