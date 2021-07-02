@@ -1,3 +1,7 @@
+# https://kdt.elice.io/courses/12255/lectures/102877/materials/7
+# [2기-02-04] 알고리즘 I (7/1)
+# 실습 해설 2. 퀵정렬 구현하기
+
 def quickSort(array):
     '''
     퀵정렬을 통해 오름차순으로 정렬된 array를 반환하는 함수를 작성하세요.
