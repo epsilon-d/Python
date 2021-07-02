@@ -45,7 +45,7 @@ class orderManager:
                     prevElem.myNext = nextElem
 
                 if nextElem != None:
-                    nextElem.myNext = prevElem
+                    nextElem.myPrev = prevElem
 
                 if current == self.end:
                     self.end = prevElem
