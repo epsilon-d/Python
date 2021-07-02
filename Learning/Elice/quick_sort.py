@@ -1,14 +1,14 @@
 def quickSort(array):
     '''
-    퀵정렬을 통해 오름차순으로 정렬된 array를반환하는 함수를 작성하세요.
+    퀵정렬을 통해 오름차순으로 정렬된 array를 반환하는 함수를 작성하세요.
     '''
     if len(array) <= 1:
         return array
 
-        pivot = array[0]
+    pivot = array[0]
 
-        left = getSmall(array[1:], pivot)
-        right = getLarge(array[1:], pivot)
+    left = getSmall(array[1:], pivot)
+    right = getLarge(array[1:], pivot)
 
     return quickSort(left) + [pivot] + quickSort(right)
 
