@@ -4,6 +4,7 @@ class Animal:
         self.age = 0
         self.leg = 4
         self.wing = "no"
+        print("animal")
 
     def shout(self):
         print("growl")
@@ -14,12 +15,21 @@ class Duck(Animal):
         super().__init__()
         self.leg = 2
         self.wing = "yes"
+        print("duck")
 
     def shout(self):
         print("꽥꽥")
 
 
-a = Duck()
-print(a.age)
-a.age = 5
-print(a.age)
+class DuckOne(Duck):
+    def __init__(self):
+        super().__init__()
+        print("duck_one")
+
+
+# a = Duck()
+# print(a.age)
+# a.age = 5
+# print(a.age)
+
+b = DuckOne()
