@@ -20,5 +20,6 @@ class Duck(Animal):
 
 
 a = Duck()
+print(a.age)
 a.age = 5
 print(a.age)
