@@ -4,7 +4,7 @@ while True:
     n = int(input())
     if n == 0:
         break
-    prime_number = []
+    prime_number = 0
     for i in range(n + 1, (2 * n) + 1):
         stop = 0
         if i < 100:
@@ -16,5 +16,5 @@ while True:
                 stop = 1
                 break
         if stop == 0:
-            prime_number.append(i)
-    print(len(prime_number))
+            prime_number += 1
+    print(prime_number)
