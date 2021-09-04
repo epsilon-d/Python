@@ -15,8 +15,22 @@ for i in range(2, 10000):
             break
     if stop == 0:
         prime_list.append(i)
-print(prime_list)
+prime_list.remove(2)
+
+even_number = dict()
+for j in range(len(prime_list)):
+    if prime_list[j] > 5000:
+        break
+    for k in range(j, len(prime_list)):
+        a = prime_list[j]
+        b = prime_list[k]
+        if a + b > 10000:
+            break
+        even_number[a + b] = [a, b]
 
 for i in range(T):
     n = int(input())
-    print(n)
+    if n == 4:
+        print(2, 2)
+        continue
+    print(even_number[n][0], even_number[n][1])
